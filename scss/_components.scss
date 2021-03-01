@@ -828,8 +828,28 @@
   background-color: $color-blue-primary;
   background-image: url('../dist/images/image-bg-footer.png');
   background-repeat: no-repeat;
-  // background-size: cover;
   background-position: center bottom;
+  position: relative;
+  @media screen and (min-width: 1440px) {
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: -987%;
+      width: 1000%;
+      height: 279px;
+      content: '';
+      background-color: $color-white-primary;
+    }
+    &::after {
+      position: absolute;
+      bottom: 0;
+      right: -987%;
+      width: 1000%;
+      height: 267px;
+      content: '';
+      background-color: $color-white-primary;
+    }
+  }
   @media screen and (max-width: $mobile) {
     padding: 61px 0 40px;
     background-image: url('../dist/images/image-bg-footer__mb.png');
