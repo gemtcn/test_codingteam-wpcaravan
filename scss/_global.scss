@@ -1,0 +1,68 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap');
+
+$primary-font: 'Noto Sans JP', sans-serif;
+$secondary-font: 'Lexend Exa', sans-serif;
+
+body {
+  font-family: $primary-font;
+  font-size: 13px;
+  color: $color-text-black;
+  overflow-x: hidden;
+  background-color: $color-white-primary;
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+.container {
+  padding: 0 15px;
+  @media screen and (min-width: 1200px){
+    max-width: 1072px;
+  }
+}
+.row {
+  margin: 0 -15px;
+}
+div[class^='col-'] {
+  padding: 0 15px;
+}
+
+.crv-main--button {
+  @include font(15px, 19.5px, 700);
+  padding: 16px 58px;
+  background: $color-blue-primary;
+  color: $color-white-primary;
+  display: inline-block;
+  &.bg-white {
+    color: $color-blue-primary;
+  }
+}
+
+.slick-slide {
+  height: auto;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 68px;
+  right: 68px;
+  border-radius: 50%;
+  background-color: $color-blue-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  z-index: 999;
+  @media screen and (max-width: $mobile) {
+    width: 35px;
+    height: 35px;
+    bottom: 30px;
+    right: 30px;
+    img {
+      max-width: 20px;
+    }
+  }
+}

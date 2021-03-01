@@ -1,0 +1,36 @@
+// Color
+$color-blue-primary: #00264D;
+$color-blue-secondary: #00356C;
+$color-black-primary: #000;
+$color-white-primary: #fff;
+$color-text-black: #2E2E2E;
+$color-text-gray: #7B7B7B;
+
+// Media query
+$mobile-small: 320px;
+$mobile: 480px;
+$tablet: 768px;
+$tablet-large: 1024px;
+
+// Mixin
+@mixin translate($x, $y...) {
+  transform: translate($x, $y);
+  -webkit-transform: translate($x, $y);
+  -moz-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+}
+
+@mixin transition {
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+@mixin font($font-size, $line-height, $font-weight...) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
